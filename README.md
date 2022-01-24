@@ -1,6 +1,8 @@
 # simple-mac-dashboard
 Create a very basic dashboard - work in progress
 
+
+## TODO
 This will utilize mac commands:
 ```
 system_profiler SPSoftwareDataType
@@ -35,7 +37,41 @@ ProductVersion:	11.6.1
 BuildVersion:	20G224
 ```
 
+Get the wireless connection information:
+```
+For Mac OS query the airport using os module. "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I" Then, look the name assigned to SSID by your school. It should be something similar for the other operating systems.
+```
 
+### TODO for other OSs
+Windows PowerShell:
+```
+netsh wlan show interfaces
+
+
+There is 1 interface on the system:
+
+    Name                   : Wi-Fi
+    Description            : Intel(R) Wi-Fi 6 AX201 160MHz
+    GUID                   : Really-long-GUID-because-IT-IS-UNIQUE!
+    Physical address       : aa:bb:cc:dd:ee:ff:gg
+    Interface type         : Primary
+    State                  : connected
+    SSID                   : MyGenericFreeWirelessRouterNotAPhish
+    BSSID                  : aa:bb:cc:dd:ee:ff:gg
+    Network type           : Infrastructure
+    Radio type             : 802.11ac
+    Authentication         : WPA2-Personal
+    Cipher                 : CCMP
+    Connection mode        : Profile
+    Band                   : 5 GHz
+    Channel                : 153
+    Receive rate (Mbps)    : 526.5
+    Transmit rate (Mbps)   : 866.7
+    Signal                 : 82%
+    Profile                : MyGenericFreeWirelessRouterNotAPhish
+
+    Hosted network status  : Not available
+```
 
 # Simple Docker Express Application
 
